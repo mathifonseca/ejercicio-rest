@@ -25,7 +25,7 @@ public class EstudianteResource {
     }
 
     @GET
-    @Produces("application/json")
+    @Produces({"application/json","application/xml"})
     public List<Estudiante> getJson() {
         return sb.lista();
     }
