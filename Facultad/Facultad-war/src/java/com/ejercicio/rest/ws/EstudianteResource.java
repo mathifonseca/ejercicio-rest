@@ -11,7 +11,6 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Produces;
 import java.util.List;
 import javax.ws.rs.PathParam;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
 @Path("estudiantes")
@@ -51,8 +50,8 @@ public class EstudianteResource {
     @POST
     @Consumes("application/json")
     @Produces("application/json")
-    public Estudiante postJson(@QueryParam(value = "nombre") String nombre, @QueryParam(value = "nota") Long nota) {
-        return sb.alta(nombre, nota);
+    public Estudiante postJson(Estudiante estudiante) {
+        return sb.alta(estudiante);
     }
     
 }

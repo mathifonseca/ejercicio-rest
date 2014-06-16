@@ -12,8 +12,7 @@ public class EstudianteSB {
     
     List<Estudiante> bd = new ArrayList<>();
 
-    public Estudiante alta(String nombre, Long nota) {
-        Estudiante e = new Estudiante(nombre, nota);
+    public Estudiante alta(Estudiante e) {
         bd.add(e);
         return e;
     }
