@@ -1,9 +1,16 @@
 package com.ejercicio.rest.dominio;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Estudiante {
     
     String nombre;
     Long nota;
+    
+    public Estudiante() {
+        
+    }
 
     public Estudiante(String nombre, Long nota) {
         this.nombre = nombre;
